@@ -1,6 +1,6 @@
 function Clients() {
     return (
-        <div>Clients</div>
+        <section id="clients" className="h-screen">Clients</section>
     )
 }
 
