@@ -33,7 +33,11 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       gridTemplateColumns:{
-        "16": "repeat(2,50vw)"
+        "16": "repeat(2,50vw)",
+        "17":"100vw"
+      },
+      blur:{
+        xs:"2px"
       }
     },
   },

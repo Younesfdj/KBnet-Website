@@ -1,8 +1,8 @@
 import { Slider } from "@/components/Slider"
 function Services() {
     return (
-        <section id="services" className="grid grid-cols-16 h-screen bg-gray-100">
-            <div className="flex justify-center items-center flex-col ">
+        <section id="services" className="grid grid-cols-17 lg:grid-cols-16 h-screen bg-gray-100">
+            <div className="flex justify-center items-center flex-col row-start-2 lg:row-start-1">
                 <Slider />
             </div>
             <div className="flex justify-center items-center px-10 ">

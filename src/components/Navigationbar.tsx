@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from 'next/router';
 import { AlignJustifyIcon, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Fredoka, Roboto, Poppins } from "@next/font/google"
@@ -13,22 +13,23 @@ const fredoka = Fredoka({
 })
 const poppins = Poppins({
     subsets: ["latin"],
-    weight: ["400"]
+    weight: ["400", "500", "600"]
 })
 
 const Navigationbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname();
+    const router = useRouter();
+    const currentUrl = router.asPath;
 
     const routes = [
-        { href: "/", label: "Accueille" },
+        { href: "#", label: "Accueille" },
         { href: "#services", label: "Services" },
         { href: "#clients", label: "Clients" },
         { href: "#contact", label: "Contact" },
     ];
     return (
-        <nav className="border-b border-b-zinc-200 p-3 ">
-            <div className="mx-auto max-w-7xl">
+        <nav className="border-b border-b-zinc-200 p-3">
+            <div className="max-w-screen">
                 <div className="container">
                     <div className="flex justify-between">
                         <Link href="/" className={`${fredoka.className} font-normal text-xl`}>
@@ -39,9 +40,9 @@ const Navigationbar = () => {
                                 <Link
                                     key={route.href}
                                     href={route.href}
-                                    className={`${poppins.className} hover:text-primary text-md font-normal transition-colors ${pathname === route.href
-                                        ? "text-black dark:text-white"
-                                        : "text-muted-foreground"
+                                    className={`${poppins.className} hover:text-primary hover:border-b hover:border-b-black text-md font-medium transition-colors ${currentUrl === "/" + route.href
+                                        ? "border-b border-b-black"
+                                        : ""
                                         }`}
                                 >
                                     {route.label}
@@ -74,10 +75,7 @@ const Navigationbar = () => {
                                                 <Link
                                                     onClick={() => setIsOpen(false)}
                                                     href="/"
-                                                    className={`${fredoka.className} font-normal text-xl text-zinc-950 hover:text-black dark:text-white ${pathname === "/"
-                                                        ? "font-bold text-black"
-                                                        : "text-muted-foreground"
-                                                        }`}
+                                                    className={`${fredoka.className} font-normal text-xl text-zinc-950 hover:text-black dark:text-white`}
                                                 >
                                                     KBNET
                                                 </Link>
@@ -87,9 +85,9 @@ const Navigationbar = () => {
                                                     <Link
                                                         onClick={() => setIsOpen(false)}
                                                         href={route.href}
-                                                        className={`text-muted-foreground text-base font-normal ml-3 hover:text-black dark:text-white ${pathname === route.href
-                                                            ? "font-bold text-black"
-                                                            : "text-muted-foreground"
+                                                        className={`text-muted-foreground text-base font-normal ml-3 hover:text-black dark:text-white ${currentUrl === "/" + route.href
+                                                            ? "border-b border-b-black"
+                                                            : ""
                                                             }`}
                                                     >
                                                         {route.label}
