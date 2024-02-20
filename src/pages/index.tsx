@@ -2,7 +2,7 @@ import Accueille from "@/components/Accueille";
 import Services from "@/components/Services";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
-import { Poppins } from "@next/font/google"
+import { Poppins } from "next/font/google"
 
 const poppins = Poppins({
   subsets: ["latin"],

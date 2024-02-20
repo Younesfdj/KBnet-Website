@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 import { AlignJustifyIcon, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Fredoka, Roboto, Poppins } from "@next/font/google"
+import { Fredoka, Roboto, Poppins } from "next/font/google"
 
 const fredoka = Fredoka({
     subsets: ["latin"],
