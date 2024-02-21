@@ -45,12 +45,12 @@ const slidesContent = [
         backgroundImage: dev
     },
     {
-        title: "Electricté",
+        title: "Electricité",
         body: "assure l'alimentation fiable des équipements et met en place des solutions de redondance.",
         backgroundImage: electricite
     },
     {
-        title: "Genie cevil",
+        title: "Genie civil",
         body: "s'occupe de la construction de structures génie civil, tels que les mats, pylônes, panneaux autoroute et shelters.",
         backgroundImage: genieCivil
     },

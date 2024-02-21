@@ -22,7 +22,7 @@ const Navigationbar = () => {
     const currentUrl = router.asPath;
 
     const routes = [
-        { href: "#", label: "Accueille" },
+        { href: "#", label: "Accueil" },
         { href: "#services", label: "Services" },
         { href: "#clients", label: "Clients" },
         { href: "#contact", label: "Contact" },

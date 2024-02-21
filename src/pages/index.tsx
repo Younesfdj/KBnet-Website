@@ -1,4 +1,4 @@
-import Accueille from "@/components/Accueille";
+import Accueil from "@/components/Accueil";
 import Services from "@/components/Services";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
@@ -12,7 +12,7 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <div className={`${poppins.className} max-w-screen overflow-x-hidden`}>
-      <Accueille />
+      <Accueil />
       <Services />
       <Clients />
       <Contact />

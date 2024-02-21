@@ -50,7 +50,7 @@ function Clients() {
                 <div className="grid grid-cols-2 h-[35rem] w-[36rem] py-4 px-4 gap-3">
                     {
                         clientGrid.map((client, index) => (
-                            <Atropos className="w-[12rem] h-[8rem] cursor-pointer">
+                            <Atropos className="w-[12rem] h-[8rem]">
                                 <div key={index} className="rounded-md flex justify-center items-center w-full h-full bg-gray-100 p-4">
                                     <Image src={client.logoPath} alt={client.alt} data-atropos-offset="2" className="aspect-[3/2] w-full object-contain" />
                                 </div>
