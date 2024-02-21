@@ -49,23 +49,23 @@ export function ContactForm() {
     }
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center p-5 lg:p-0">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                    <FormField
-                        control={form.control}
-                        name="Name"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Name</FormLabel>
-                                <FormControl className="border border-gray-500">
-                                    <Input placeholder="Your Name" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
                     <div className="flex gap-5">
+                        <FormField
+                            control={form.control}
+                            name="Name"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Name</FormLabel>
+                                    <FormControl className="border border-gray-500">
+                                        <Input placeholder="Your Name" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                         <FormField
                             control={form.control}
                             name="Email"
@@ -79,20 +79,20 @@ export function ContactForm() {
                                 </FormItem>
                             )}
                         />
-                        <FormField
-                            control={form.control}
-                            name="Subject"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Subject</FormLabel>
-                                    <FormControl className="border border-gray-500">
-                                        <Input placeholder="Subject" {...field} />
-                                    </FormControl>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
                     </div>
+                    <FormField
+                        control={form.control}
+                        name="Subject"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Subject</FormLabel>
+                                <FormControl className="border border-gray-500">
+                                    <Input placeholder="Subject" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
                     <FormField
                         control={form.control}
                         name="Message"
